@@ -11,7 +11,9 @@ app.listen(3000, function() {
 
 app.get("/", function(req, res) {
 
-    const url = "https://api.openweathermap.org/data/2.5/weather?lat=-33.91&lon=25.57&units=metric&APPID=ff3c37aef04eda84d0b474abb2bf615f";
+    const apiKey = secret;
+
+    const url = "https://api.openweathermap.org/data/2.5/weather?lat=-33.91&lon=25.57&units=metric&APPID=" + apiKey;
 
     https.get(url, function(response) {        
 
